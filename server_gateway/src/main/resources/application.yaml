@@ -1,0 +1,15 @@
+server:
+  port: ${PORT:9001}
+spring:
+  application:
+    name: cloud-gateway
+  cloud:
+    gateway:
+      # 启用动态路由，使用lb协议
+      discovery:
+        locator:
+          enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${EUREKA_HOST:110.42.157.115}:8000/eureka/
