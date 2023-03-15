@@ -27,11 +27,11 @@ public class Tool {
     private Integer toolId;
 
     @ApiModelProperty(value = "工具编码", allowEmptyValue = true)
-    @Column(name = "tool_code")
+    @Column(name = "tool_code", unique = true)
     private String toolCode;
 
     @ApiModelProperty(value = "工具名称", allowEmptyValue = true)
-    @Column(name = "tool_code")
+    @Column(name = "tool_name", unique = true)
     private String toolName;
 
     @ApiModelProperty(value = "工具简述", allowEmptyValue = true)
@@ -39,7 +39,7 @@ public class Tool {
     private String toolDesc;
 
     @ApiModelProperty(value = "工具描述", allowEmptyValue = true)
-    @Column(name = "tool_code")
+    @Column(name = "tool_description")
     private String toolDescription;
 
     @ApiModelProperty(value = "工具地址", allowEmptyValue = true)
@@ -52,6 +52,6 @@ public class Tool {
 
     @ApiModelProperty(value = "工具图像", allowEmptyValue = true)
     @ManyToOne
-    @JoinColumn(name = "tool_group_id")
+    @JoinColumn(name = "tool_group_f_id")
     private ToolGroup toolGroup;
 }

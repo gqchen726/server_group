@@ -16,7 +16,6 @@ spring:
       max-request-size: 100MB
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    # ���ز���
     url: jdbc:${CLEARDB_DATABASE_URL:mysql://tianyuge_tool:tianyuge397#(&@db4free.net/tianyuge_tool_db?reconnect=true}&serverTimezone=UTC&characterEncoding=utf-8
   jpa:
     show-sql: true
@@ -25,5 +24,5 @@ spring:
     database: mysql
     database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
   redis:
-    url: ${REDIS_URL:redis://:paaaeaf561dfd8761ec41b08eeb065d1f8a33c270c13e0ddb5a6750d861cc1245@ec2-3-226-202-108.compute-1.amazonaws.com:23709}
+    url: ${REDIS_URL:redis://tianyuge:Tianyuge397*@redis-10635.c252.ap-southeast-1-1.ec2.cloud.redislabs.com:10635}
     database: 3
